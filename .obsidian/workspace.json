@@ -199,8 +199,20 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "21bd84477442e797",
+  "active": "fbf9310f42abc6fc",
   "lastOpenFiles": [
+    "linux/linux-lab2/notes/report.txt",
+    "linux/linux-lab2/notes/readme.md",
+    "linux/linux-lab2/notes/debug.txt",
+    "linux/linux-lab2/notes/data.log",
+    "linux/linux-lab2/notes/config.txt",
+    "linux/linux-lab2/logs/error.log",
+    "linux/linux-lab2/logs/app.log",
+    "linux/linux-lab2/config/hardcopy.txt",
+    "linux/linux-lab2/config/shortcut.txt",
+    "linux/linux-lab2/config/app.conf",
+    "linux/linux-lab2/backup/posted",
+    "linux/linux-lab2/backup/app.conf.bak",
     "linux/linux.md",
     "linux/linux.md.md",
     "notes/LINUX-cheatsheet.md",
