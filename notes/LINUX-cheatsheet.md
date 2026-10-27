@@ -172,3 +172,23 @@
 <!--SR:!2026-10-31,4,270-->
 Команда `pwd`? :: Чтобы узнать имя текущего каталога.
 <!--SR:!2026-10-31,4,270-->
+grep это :: Поиск текста. grep [ОПЦИИ] "ТЕКСТ" ФАЙЛЫ
+find это :: Поиск файлов. find [ГДЕ_ИСКАТЬ] [УСЛОВИЯ]
+Найти `ERROR` в одном файле (grep) :: grep "ERROR" logs/app.log
+Найти `ERROR` во всех `.log` (grep) :: grep "ERROR" logs/*.log
+Искать во всех файлах каталога (grep) :: grep "ERROR" logs/*
+Искать без учёта регистра (grep) :: grep -i "error" logs/app.log
+Показать номера строк (grep) :: grep -n "ERROR" logs/app.log
+Посчитать строки с совпадением (grep) :: grep -c "ERROR" logs/app.log
+Искать рекурсивно в каталоге (grep) :: grep -r "ERROR" logs/
+Искать одно ИЛИ другое (grep -E) :: grep -E "ERROR|WARNING" logs/app.log
+Найти все `.txt` в текущем каталоге и ниже (find) :: find . -name "*.txt"
+Найти все `.log` (find) :: find . -name "*.log"
+Найти файл с точным именем (find) :: find . -name "report.txt"
+Найти имена, содержащие `report` (find) :: find . -name "*report*"
+Найти имена, начинающиеся с `app` (find) :: find . -name "app*"
+Найти имена, заканчивающиеся на `log` (find) :: find . -name "*log"
+Найти каталоги с именем `backup` (find) :: find . -type d -name "backup"
+Найти обычные файлы с именем `app.conf` (find) :: find . -type f -name "app.conf"
+Искать от корня Linux (find) :: find / -name ".bashrc" 2>/dev/null
+Искать в домашнем каталоге (find) :: find ~ -name ".bashrc"

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/linux.md.md",
+                "file": "notes/LINUX-cheatsheet.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "linux.md"
+              "title": "LINUX-cheatsheet"
             }
           }
         ]
@@ -201,8 +201,9 @@
   },
   "active": "21bd84477442e797",
   "lastOpenFiles": [
-    "notes/LINUX-cheatsheet.md",
+    "linux/linux.md",
     "linux/linux.md.md",
+    "notes/LINUX-cheatsheet.md",
     "notes/li.md",
     "notes/vim-cheatsheet.md",
     "notes/dashboard.md.md",
