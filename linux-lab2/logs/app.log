@@ -1,0 +1,5 @@
+INFO Server started
+INFO User posted logged in
+WARNING Disk usage is high
+ERROR Database connection failed
+INFO Server stopped
