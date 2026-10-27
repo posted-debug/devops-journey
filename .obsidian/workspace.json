@@ -4,31 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "f62eb389129abca3",
+        "id": "c6442994607a13ae",
         "type": "tabs",
         "children": [
           {
-            "id": "b79700896eabe1c6",
+            "id": "fbf9310f42abc6fc",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "linux/linux.md.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "4b9f656dd8410d2e",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "title": "linux.md"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -202,9 +195,20 @@
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
       "obsidian-git:Open Git source control": false,
-      "obsidian-spaced-repetition:Review flashcards": false
+      "obsidian-spaced-repetition:Review flashcards": false,
+      "homepage:Open homepage": false
     }
   },
-  "active": "4b9f656dd8410d2e",
-  "lastOpenFiles": []
+  "active": "21bd84477442e797",
+  "lastOpenFiles": [
+    "notes/LINUX-cheatsheet.md",
+    "linux/linux.md.md",
+    "notes/li.md",
+    "notes/vim-cheatsheet.md",
+    "notes/dashboard.md.md",
+    "notes/VIM-cheatsheet.md",
+    "notes/tmux-cheatsheet.md",
+    "notes/IMG_5432.jpeg",
+    "notes/IMG_5431.jpeg"
+  ]
 }
