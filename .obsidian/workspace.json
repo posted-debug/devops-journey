@@ -201,8 +201,13 @@
   },
   "active": "fbf9310f42abc6fc",
   "lastOpenFiles": [
-    "linux/linux-lab2/notes/report.txt",
+    "Pasted image 20261028201045.png",
     "linux/linux-lab2/notes/readme.md",
+    "linux/linux.md",
+    "notes/IMG_5432.jpeg",
+    "notes/IMG_5431.jpeg",
+    "notes/LINUX-cheatsheet.md",
+    "linux/linux-lab2/notes/report.txt",
     "linux/linux-lab2/notes/debug.txt",
     "linux/linux-lab2/notes/data.log",
     "linux/linux-lab2/notes/config.txt",
@@ -212,16 +217,11 @@
     "linux/linux-lab2/config/shortcut.txt",
     "linux/linux-lab2/config/app.conf",
     "linux/linux-lab2/backup/posted",
-    "linux/linux-lab2/backup/app.conf.bak",
-    "linux/linux.md",
     "linux/linux.md.md",
-    "notes/LINUX-cheatsheet.md",
     "notes/li.md",
     "notes/vim-cheatsheet.md",
     "notes/dashboard.md.md",
     "notes/VIM-cheatsheet.md",
-    "notes/tmux-cheatsheet.md",
-    "notes/IMG_5432.jpeg",
-    "notes/IMG_5431.jpeg"
+    "notes/tmux-cheatsheet.md"
   ]
 }
