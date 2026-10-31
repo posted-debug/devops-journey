@@ -1,0 +1,8 @@
+# Настройки Obsidian: у каждого устройства свои, в git им не место
+.obsidian/
+.trash/
+
+# Мусор систем
+.DS_Store
+Thumbs.db
+desktop.ini
