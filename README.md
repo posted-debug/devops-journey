@@ -12,14 +12,16 @@
 - [x] Ubuntu в WSL2, GitHub, ssh-ключи
 - [x] tmux: сессии, сплиты, detach/attach — [шпаргалка](notes/tmux-cheatsheet.md)
 - [x] OverTheWire Bandit, уровни 0–10
-- [ ] vimtutor — пройден наполовину — [шпаргалка](notes/VIM-cheatsheet.md)
+- [x] vimtutor — [шпаргалка](notes/VIM-cheatsheet.md)
 
 **Этап 1 — Linux, Python, Git** · в процессе
 
 - [x] Хендбук Яндекса «Основы Linux» — пройден целиком
-- [ ] Брайан Уорд, «Внутреннее устройство Linux» — дочитано до главы 2.5
+- [ ] Брайан Уорд, «Внутреннее устройство Linux» — главы 1–2, глава 3 в процессе
 - [ ] Bandit до 20+ уровня
-- [ ] Права, процессы и сигналы, пользователи, systemd, cron
+- [x] Права и umask — [практика](linux/linux.md)
+- [x] Первые bash-скрипты — [bash/](bash/)
+- [ ] Процессы и сигналы, пользователи, systemd, cron
 - [ ] Python
 - [ ] Git
 
