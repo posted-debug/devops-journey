@@ -1,51 +1,35 @@
 #!/bin/bash
-mkdir -p ~/edu_rules/scripts
+# Показывает N самых больших файлов в каталоге (без захода во вложенные).
+# Использование: ./top_files.sh [каталог] [количество]
+# По умолчанию: текущий каталог, 3 файла.
 
-cat > ~/edu_rules/scripts/top_files.sh << 'EOF'
-#!/bin/bash
+set -u
 
-TARGET_DIR="$HOME/edu_rules/big"
+TARGET_DIR="${1:-.}"
+COUNT="${2:-3}"
 
-#Проверка существования каталога
-if [ -d "$TARGET_DIR" ]; then
-
-#Вывод файлов по размеру
-ls -hsS "$TARGET_DIR" | grep -v "total" | head -n 3
-
-#Если папка не обнаружена
-else
-echo "Папка не найдена" && exit 1
-
-fi
-EOF
-
-cat > ~/edu_rules/scripts/clean_old_logs.sh << 'EOF'
-#!/bin/bash
-
-TARGET_DIR="$HOME/edu_rules/logs"
-
-#Существует ли папка?
-
+# Каталог существует?
 if [ ! -d "$TARGET_DIR" ]; then
-echo "Папка $TARGET_DIR не найдена" >&2
-exit 1
+    echo "Ошибка: каталог $TARGET_DIR не найден" >&2
+    exit 1
 fi
 
-#Поиск и проверка наличия файлов
-FILES=$(find "$TARGET_DIR" -maxdepth 1 -name "*.log" -mtime +2)
-
-#Выход, если нечего удалять
-if [ -z "$FILES" ]; then
-echo "Удалять нечего"
-exit 0
+# Количество — целое число больше нуля?
+if ! [[ "$COUNT" =~ ^[0-9]+$ ]] || [ "$COUNT" -eq 0 ]; then
+    echo "Ошибка: количество должно быть целым числом больше нуля" >&2
+    exit 1
 fi
 
-#Вывод списка файлов к удалению
-echo "Файлы к удалению: $FILES"
-echo "Всего удалено: $(echo "$FILES" | wc -l)"
+# find печатает «размер<TAB>путь», sort сортирует по размеру,
+# numfmt переводит байты в K/M/G
+RESULT=$(find "$TARGET_DIR" -maxdepth 1 -type f -printf '%s\t%p\n' \
+    | sort -rn \
+    | head -n "$COUNT" \
+    | numfmt --to=iec --field=1)
 
-#Удаление файлов
-find "$TARGET_DIR" -maxdepth 1 -name "*.log" -mtime +2 -delete
-EOF
+if [ -z "$RESULT" ]; then
+    echo "В каталоге $TARGET_DIR нет файлов"
+    exit 0
+fi
 
-ls -l ~/edu_rules/scripts
+echo "$RESULT"
