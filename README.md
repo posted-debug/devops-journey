@@ -1,62 +1,68 @@
 # devops-journey
 
-Учусь на DevOps-инженера с нуля: Linux → сети → Bash и Python → Docker, CI/CD, мониторинг → Kubernetes.
-Ближайшая цель — первая работа с Linux (поддержка хостинга или младший сисадмин), дальше — DevOps.
+Учусь на DevOps с нуля. Начал 23.10.2026, занимаюсь 2–3 часа в день.
 
-Старт: 23 октября 2026 · 2–3 часа в день
+План такой: сначала первая работа в L1-поддержке хостинга или облака (цель — март–май 2027), потом сисадмин, потом DevOps, примерно через 2–3 года от старта. На стажировку в Яндекс больше не целюсь, поэтому алгоритмы и Go выкинул из ядра. Учу то, что реально спрашивают на L1–L2: Linux, сети, Bash, Nginx и разбор поломок.
 
-## Прогресс
+Следующий этап начинается не по дате, а когда закрыты «ворота» — проверяемые критерии в конце каждого этапа.
 
-**Этап 0 — подготовка**
+## Где я сейчас
+
+**Этап 1 — фундамент до первой работы.** Сейчас блок A.
+
+Уже было:
 
 - [x] Ubuntu в WSL2, GitHub, ssh-ключи
-- [x] tmux: сессии, сплиты, detach/attach — [шпаргалка](notes/tmux-cheatsheet.md)
-- [x] OverTheWire Bandit, уровни 0–10
-- [x] vimtutor — [шпаргалка](notes/VIM-cheatsheet.md)
+- [x] tmux — [шпаргалка](notes/tmux-cheatsheet.md), vimtutor — [шпаргалка](notes/VIM-cheatsheet.md)
+- [x] Bandit 0–10
+- [x] Хендбук Яндекса «Основы Linux»
+- [x] Права, umask, inode, жёсткие и символические ссылки
+- [x] Пайпы, grep / sed / awk / find / xargs, регулярки — [шпаргалка](notes/LINUX-cheatsheet.md), [задачи](notes/LINUX-practice.md)
+- [x] Уорд, главы 1–3 — [карточки](notes/WARD-cards.md)
 
-**Этап 1 — Linux, Python, Git** · в процессе
+**Блок A (недели 3–6): Linux руками и Bash**
 
-- [x] Хендбук Яндекса «Основы Linux» — пройден целиком
-- [ ] Брайан Уорд, «Внутреннее устройство Linux» — главы 1–3, глава 4 в процессе — [карточки](notes/WARD-cards.md)
-- [ ] Bandit до 20+ уровня
-- [x] Права и umask — [практика](linux/linux.md)
-- [x] Шпаргалка по командам — [карточки](notes/LINUX-cheatsheet.md), задачи на понимание — [карточки](notes/LINUX-practice.md)
-- [x] Bash-скрипты: очистка логов, проверка дисков, бэкап каталога — [bash/](bash/)
-- [ ] Процессы и сигналы, пользователи, systemd, cron
-- [ ] Python
-- [ ] Git
+- [x] Процессы и сигналы: ps, top, kill, nohup, jobs; SIGTERM против SIGKILL
+- [ ] systemd: systemctl, journalctl, свой unit-файл
+- [ ] Пользователи, группы, sudo; suid/sgid, sticky bit
+- [ ] Диски: df против du, df -i, lsblk, mount; lsof +L1
+- [ ] apt, cron, ssh: ключи, ~/.ssh/config, scp, rsync
+- [ ] Bash по 30 минут каждый день
+- [ ] Каждый скрипт проходит shellcheck, trap
+- [ ] awk и sed на настоящем логе nginx
+- [x] Скрипт проверки места на диске — [check_disk.sh](bash/check_disk.sh)
+- [ ] Скрипт бэкапа папки с ротацией (бэкап есть — [backup_dir.sh](bash/backup_dir.sh), ротации пока нет)
+- [ ] Скрипт разбора лога nginx
+- [ ] Bandit до 20
+- [ ] Git: commit, branch, merge, .gitignore
 
-**Этап 2 — сервер и сети** · следующий
+**Блок B (недели 7–10): сети** — уже начал, Уорд гл. 9 до 9.12 — [шпаргалка](notes/NETWORK-cheatsheet.md)
 
-- [ ] Сети: модель OSI, TCP/IP, DNS, HTTP — главы Уорда про сети
-- [ ] VPS: вход по SSH-ключам, без root, ufw, fail2ban
-- [ ] Веб-стек: nginx как прокси перед Apache, PHP, MySQL, WordPress
-- [ ] Домен, DNS-записи (A, CNAME, MX, TXT), HTTPS через Let's Encrypt
-- [ ] Журнал поломок: 502, 403, просроченный сертификат, DNS, полный диск, упавшая БД
-- [ ] Разбор логов nginx скриптом: топ IP, ошибки 5xx, топ URL
-- [ ] Мониторинг: проверка сайта с алертом в Telegram
+**Блок C (недели 12–15): веб-стек на своём VPS** — nginx, домен, HTTPS, база, ломаю и чиню
 
-**Этап 3 — Docker и Docker Compose**
+**Блок D (недели 16–18): Docker, Zabbix, заявки**
 
-**Этап 4 — CI/CD и Ansible**
+Ворота 1: сайт на VPS по HTTPS, 5+ своих скриптов через shellcheck, 10 разобранных поломок, без гугла диагностирую «сайт не открывается».
 
-**Этап 5 — мониторинг: Prometheus и Grafana**
+**Дальше**
 
-**Этап 6 — Kubernetes**
+- Этап 2 — L1–L2 поддержка: 6–12 месяцев стажа, параллельно Python, Ansible, Git глубже
+- Этап 3 — сисадмин: Ansible, PostgreSQL, GitLab CI, Zabbix / Prometheus / Grafana
+- Этап 4 — DevOps: Kubernetes + Helm, Terraform, Yandex Cloud
 
-Подробно о том, что изучено, — в [linux/linux.md](linux/linux.md).
+Подробно, что изучено по неделям, — в [linux/linux.md](linux/linux.md).
 
 ## Структура
 
 | Папка | Что там |
 | --- | --- |
 | [`linux/`](linux/) | прогресс по Linux и практические лабы |
-| [`bash/`](bash/) | скрипты автоматизации |
-| [`python/`](python/) | утилиты и CLI-скрипты |
-| [`notes/`](notes/) | шпаргалки и карточки для повторения |
+| [`bash/`](bash/) | мои скрипты |
+| [`python/`](python/) | пока пусто, Python после выхода на L1 |
+| [`notes/`](notes/) | шпаргалки и карточки |
 
 ## Как учусь
 
-- Команды и код пишу руками, нейросеть только объясняет и проверяет.
-- Каждую тему сразу отрабатываю в терминале.
-- Карточки для интервального повторения лежат прямо в шпаргалках (Obsidian, плагин Spaced Repetition).
+- Команды и код пишу сам, нейросеть только объясняет и проверяет.
+- Каждую тему сразу пробую в терминале.
+- Повторяю карточками в Obsidian (Spaced Repetition).

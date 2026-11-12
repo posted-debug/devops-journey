@@ -5,7 +5,7 @@
 ## Источники
 
 - Яндекс, «Основы Linux» — пройден целиком.
-- Брайан Уорд, «Внутреннее устройство Linux» — главы 1–3 прочитаны, глава 4 (диски и файловые системы) в процессе.
+- Брайан Уорд, «Внутреннее устройство Linux» — главы 1–3 прочитаны, глава 4 до 4.2.1, глава 9 (сеть) до 9.12. Дальше читаю не подряд, а главу под тему недели.
 - OverTheWire Bandit — уровни 0–10.
 - vimtutor — пройден.
 
@@ -38,21 +38,29 @@
 
 - Уорд, глава 3: типы файлов устройств, major/minor, sysfs (`/sys/devices`, `/sys/block`), `udevadm info` и `monitor`, devtmpfs и правила udev, имена устройств (`sd*`, `vd*`, `nvme*`, `dm-*`, `tty*`, `pts`), SCSI и `lsscsi`.
 - Уорд, глава 4: таблицы разделов MBR и GPT, основные/расширенные/логические разделы, `parted -l`, `fdisk`, `blockdev --rereadpt`, выравнивание разделов на SSD, VFS.
+- Процессы и сигналы: `ps aux`, `top`, `kill`, `nohup`, `jobs`, `&`, `fg`; SIGTERM против SIGKILL; зомби и сироты.
+- Уорд, глава 9 до 9.12: слои сети, TCP и UDP, IP, маски и CIDR, маршруты и шлюз (`ip route`), `ping`, `traceroute`, `dig`, интерфейсы (`ip a`), netplan и NetworkManager, `/etc/hosts`, `/etc/resolv.conf`, `/etc/nsswitch.conf`. Вместо старых `ifconfig`/`route`/`netstat` — `ip` и `ss`.
 - Скрипты: `check_disk.sh` (разбор `df -P` через awk, `${var%%%}`, `while read` + `< <(...)`), `backup_dir.sh` (`tar -C`, `realpath`, имя архива с датой), `set -euo pipefail`.
 
 ## Дальше
 
-- Уорд: глава 4 до конца (типы ФС, монтирование, `/etc/fstab`, swap, LVM), затем главы про сети.
-- `chown`, пользователи и группы, `sudo`.
-- Процессы на практике: `kill`, сигналы, `jobs`, `nohup`.
-- Больше скриптов и однострочников с `awk` и `sed`.
-- Bandit до 20+.
+Блок A по плану v3 (недели 3–6):
+
+- systemd: `systemctl`, `journalctl`, свой unit-файл.
+- Пользователи, группы, `sudo`; suid/sgid, sticky bit.
+- Диски: `df` против `du`, `df -i`, `lsof +L1`.
+- `apt`, `cron`, ssh-ключи, `~/.ssh/config`, `scp`, `rsync`.
+- Bash каждый день, awk и sed на логе nginx, ротация в `backup_dir.sh`.
+- Bandit до 20, Git-минимум.
+
+Потом блок B — сети до конца (DNS, HTTP, TLS, файрвол).
 
 ## Карточки
 
 - [Шпаргалка по командам](../notes/LINUX-cheatsheet.md)
 - [Задачи на понимание: права, потоки, find, grep, awk, sed](../notes/LINUX-practice.md)
 - [Уорд, главы 1–4](../notes/WARD-cards.md)
+- [Сеть: Уорд, глава 9](../notes/NETWORK-cheatsheet.md)
 
 ## Практика
 
